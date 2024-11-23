@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MicroLearn Japanese</title>
+  <link rel="stylesheet" type="text/css" href="styles/popup.css">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>MicroLearn Japanese</h1>
+      <div class="timer" id="nextExercise">Next: --:--</div>
+    </div>
+
+    <div class="content">
+      <!-- Start Screen -->
+      <div id="startScreen" class="start-screen">
+        <h2>Welcome to Japanese Learning!</h2>
+        <p>Learn Japanese through quick exercises at your own pace.</p>
+        <div class="stats">
+          <div>Completed Today: <span id="completedToday">0</span></div>
+          <div>Streak: <span id="currentStreak">0</span> days</div>
+        </div>
+        <button id="startLearning" class="primary-button">Start Learning</button>
+      </div>
+
+      <!-- Waiting Screen -->
+      <div id="waitingScreen" class="waiting-screen hidden">
+        <div class="waiting-message">
+          <h3>Your next lesson will be ready soon</h3>
+          <button id="startNow" class="primary-button">Start Now</button>
+        </div>
+      </div>
+
+      <!-- Exercise Screen -->
+      <div id="exerciseContainer" class="hidden">
+        <div class="category" id="exerciseCategory"></div>
+        <div class="exercise-content" id="exerciseContent"></div>
+        <div class="exercise-input">
+          <input type="text" id="answerInput" placeholder="Your answer...">
+          <button id="submitAnswer">Submit</button>
+        </div>
+        <div class="hint-container">
+          <button id="showHint" class="secondary-button">Show Hint</button>
+          <div id="hintText" class="hint hidden"></div>
+        </div>
+        <div id="romanji" class="romanji hidden"></div>
+        <button id="skipExercise" class="secondary-button">Skip</button>
+      </div>
+
+      <!-- Completion Screen -->
+      <div id="completionScreen" class="hidden completion-screen">
+        <div class="completion-message">
+          <h3>Well done! 🎉</h3>
+          <p>Your next lesson will be in:</p>
+          <div class="next-timer" id="completionTimer">--:--</div>
+        </div>
+        <div class="completion-actions">
+          <button id="keepLearning" class="primary-button">Keep Learning</button>
+          <button id="endSession" class="secondary-button">End Session</button>
+        </div>
+      </div>
+
+      <!-- Completion Actions -->
+    </div>
+
+    <div class="footer">
+      <button id="openOptions" class="icon-button">⚙️ Settings</button>
+      <div class="status" id="status">Timer: Inactive</div>
+    </div>
+  </div>
+  <script src="js/popup.js" type="module"></script>
+</body>
+</html>

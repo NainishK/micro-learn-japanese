@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "MicroLearn Japanese",
+  "version": "1.0",
+  "description": "Learn Japanese through micro-exercises while browsing",
+  "permissions": [
+    "alarms",
+    "storage",
+    "notifications"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "options_page": "options.html"
+}

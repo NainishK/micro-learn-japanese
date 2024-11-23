@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MicroLearn Settings</title>
+  <style>
+    body {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .setting-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #666;
+    }
+
+    input[type="number"] {
+      width: 80px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .status {
+      margin-top: 16px;
+      padding: 8px;
+      border-radius: 4px;
+      display: none;
+    }
+
+    .success {
+      background-color: #dff0d8;
+      color: #3c763d;
+      display: block;
+    }
+
+    .error {
+      background-color: #f2dede;
+      color: #a94442;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>MicroLearn Settings</h1>
+    
+    <div class="setting-group">
+      <label for="interval">Exercise Interval (minutes):</label>
+      <input type="number" id="interval" min="1" max="180">
+    </div>
+
+    <div class="setting-group">
+      <label for="exerciseTypes">Exercise Types:</label>
+      <div>
+        <input type="checkbox" id="mathExercises" checked>
+        <label for="mathExercises">Math Exercises</label>
+      </div>
+      <div>
+        <input type="checkbox" id="vocabExercises" checked>
+        <label for="vocabExercises">Vocabulary Exercises</label>
+      </div>
+      <div>
+        <input type="checkbox" id="logicExercises" checked>
+        <label for="logicExercises">Logic Puzzles</label>
+      </div>
+    </div>
+
+    <button id="save">Save Settings</button>
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="js/options.js"></script>
+</body>
+</html>
